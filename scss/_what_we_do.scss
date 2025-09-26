@@ -1,0 +1,129 @@
+.what-we-do {
+
+    &__line {
+        border: 1px solid $color-black;
+        width: 100px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        background: $color-black;
+    }
+
+    &__subtitle {
+        font-family: $font-montserrat;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-bottom: 90px;
+    }
+
+    &__card {
+        max-width: 1385px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 177px;
+    }
+
+    &__card_content {
+        max-width: 474px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 115px;
+    }
+
+    &__card_img {
+        position: relative;
+    }
+
+    &__card-background {
+        width: 585px;
+        height: 470px;
+        background-color: $color-background;
+    }
+
+    &__card-img {
+        width: 585px;
+        height: 470px;
+        position: absolute;
+        top: 57px;
+        left: 215px;
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    &__card-img.scroll {
+        transition: all 0.7s ease;
+        top: 0;
+        left: 0;
+    }
+
+    &__card-img_1 {
+        left: -215px;
+    }
+
+    &__card-img_1.scroll {
+        transition: all 0.7s ease;
+        top: 0;
+        left: 0;
+    }
+
+    &__card_reverse {
+        flex-direction: row-reverse;
+        margin-left: auto;
+    }
+
+    &__card-subtitle {
+        font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $color-black;
+    }
+
+    &__card-title {
+        font-family: $font-montserrat;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-bottom: 19px;
+    }
+
+    &__card-text {
+        font-family: $font-open;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-black;
+        margin-bottom: 40px;
+    }
+
+    &__card-city {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.btn {
+    width: 190px;
+    height: 50px;
+    font-family: $font-montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $color-text;
+    background: none;
+    border: 1px solid $color-black;
+    padding: 16px 40px;
+    margin-bottom: 60px;
+}

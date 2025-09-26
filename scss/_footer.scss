@@ -1,0 +1,31 @@
+.footer {
+    background: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    height: 549px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__upper-block,
+    &__lower-block {
+        display: inline-flex;
+        max-width: 770px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__upper-block {
+        margin-bottom: 41px;
+    }
+
+    &__text {
+        font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-white;
+    }
+}
+
+
+

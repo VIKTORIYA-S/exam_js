@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/favicon_1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -19,7 +22,7 @@
                     </div>
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a class="nav__link" href="#"><span class="dot active"></span>HOME</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#what-we-do"><span class="dot active"></span>ABOUT US</a></li>
                             <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>PROJECTS</a></li>
                             <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>NEWS</a></li>
                             <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>CONTACT</a></li>
@@ -35,20 +38,84 @@
                 </div>
                 <div class="header__content">
                     <h1 class="header__title">SIMPLE &#38; MODERN</h1>
-                    <h2 class="header__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h2>
-                    <div class="arrow header__arrow">&#62;</div>
+                    <h4 class="header__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h4>
                 </div>
+                <div class="arrow header__arrow">&#62;</div>
                 <div class="header__dots">
-                    <div class="dot header__dot active"></div>
-                    <div class="dot header__dot"></div>
-                    <div class="dot header__dot"></div>
-                    <div class="dot header__dot"></div>
-                    <div class="dot header__dot"></div>
+                    <div class="wrapper__dot"><span class="header__dot active"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
                 </div>
+                <div class="header__sentinel"></div>
             </header>
         </div>
+        <main class="main">
+            <div class="arrow main__arrow">&#62;</div>
+            <section class="what-we-do" id="what-we-do">
+                <div class="what-we-do__header">
+                    <hr class="line what-we-do__line">
+                    <h2 class="what-we-do__subtitle">WHAT WE DO</h2>
+                </div>
+                <div class="what-we-do__content">
+                    <div class="what-we-do__card">
+                        <div class="what-we-do__card_img">
+                            <div class="what-we-do__card-background"></div>
+                            <img class="what-we-do__card-img" src="assets/img/Mask Group.png" alt="">
+                        </div>
+                        <div class="what-we-do__card_content">
+                            <h4 class="what-we-do__card-subtitle">ONE WORLD</h4>
+                            <h2 class="what-we-do__card-title">TRADE CENTER</h2>
+                            <p class="what-we-do__card-text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                            <button class="btn what-we-do__card-button">MORE DETAILS</button>
+                            <div class="what-we-do__card-city">
+                                <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
+                                <p class="what-we-do__card-city-name">New York City, United States - 1776 feet </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="what-we-do__card what-we-do__card_reverse">
+                        <div class="what-we-do__card_img">
+                            <div class="what-we-do__card-background"></div>
+                            <img class="what-we-do__card-img what-we-do__card-img_1" src="assets/img/Mask Group_1.png" alt="">
+                        </div>
+                        <div class="what-we-do__card_content">
+                            <h4 class="what-we-do__card-subtitle">INTERNATIONAL</h4>
+                            <h2 class="what-we-do__card-title">COMMERCE CENTRE</h2>
+                            <p class="what-we-do__card-text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                            <button class="btn what-we-do__card-button">MORE DETAILS</button>
+                            <div class="what-we-do__card-city">
+                                <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
+                                <p class="what-we-do__card-city-name">New York City, United States - 1776 feet </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                
+        </main>
+        <div class="map" id="map" style="height: 700px"></div>
+        <footer class="footer">
+            <div class="header__menu footer__upper-block">
+                <div class="logo">
+                        <img class="logo__img" src="assets/img/logo.png" alt="">
+                    </div>
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_1.svg" alt=""></a></li>
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_2.svg" alt=""></a></li>
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_3.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="footer__lower-block">
+                <p class="footer__text">Copyrights &#169; 2020 Montichello</p>
+            </div>
+        </footer>
     </div>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
