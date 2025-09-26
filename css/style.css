@@ -6,16 +6,6 @@
   margin-bottom: 30px;
   background: #2C4058;
 }
-.what-we-do__subtitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #2C4058;
-  margin-bottom: 90px;
-}
 .what-we-do__card {
   max-width: 1385px;
   width: 100%;
@@ -95,6 +85,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.section__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2C4058;
+  margin-bottom: 90px;
 }
 
 .btn {
@@ -243,11 +244,24 @@ a {
   font-weight: 400;
   color: #fff;
   cursor: pointer;
-  position: fixed;
-  top: 720px;
-  left: 50%;
-  transform: translateX(-50%) rotate(90deg);
   z-index: 3;
+}
+.arrow--fixed {
+  position: fixed; /* переключаем, когда блок прокручен */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrow--outside {
+  color: #2C4058;
+  border: 1px solid #2C4058;
+}
+
+.header__arrow {
+  position: fixed;
+  top: 680px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main {
@@ -262,18 +276,6 @@ a {
   color: #2C4058;
   border: 1px solid #2C4058;
   display: none;
-}
-
-.arrow--fixed {
-  position: fixed; /* переключаем, когда блок прокручен */
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.arrow--outside {
-  color: #2C4058;
-  border: 1px solid #2C4058;
 }
 
 .logo {
@@ -412,4 +414,54 @@ a {
   font-size: 14px;
   line-height: 100%;
   color: #fff;
+}
+
+.news {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../assets/img/Background.jpg);
+}
+.news__subtitle {
+  color: #fff;
+}
+.news__slider {
+  position: relative;
+}
+.news__arrow_left {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(-50%, -50%);
+}
+.news__arrow_right {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translate(50%, -50%);
+}
+.news__slider_line {
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin: 0 auto;
+}
+.news__card {
+  max-width: 370px;
+  width: 100%;
+  height: 514px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid red;
+  background: #fff;
+  color: #fff;
+}
+
+.section__line {
+  border: 1px solid #fff;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background: #fff;
 }/*# sourceMappingURL=style.css.map */

@@ -137,11 +137,26 @@ a {
     font-weight: 400;
     color: $color-white;
     cursor: pointer;
-    position: fixed;
-    top: 720px;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
     z-index: 3;
+
+    &--fixed {
+        position: fixed;   /* переключаем, когда блок прокручен */
+        top: 20px;
+        left: 50%;
+    transform: translateX(-50%);
+    }
+
+    &--outside {
+        color: $color-black;
+        border: 1px solid $color-black;
+    }
+}
+
+    .header__arrow {
+        position: fixed;
+        top: 680px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .main {
@@ -155,18 +170,6 @@ a {
         color: $color-black;
         border: 1px solid $color-black;
         display: none;
-    }
-
-    .arrow--fixed {
-        position: fixed;   /* переключаем, когда блок прокручен */
-        top: 20px;
-        left: 50%;
-    transform: translateX(-50%);
-    }
-
-    .arrow--outside {
-        color: $color-black;
-        border: 1px solid $color-black;
     }
 
 .logo {
@@ -289,4 +292,5 @@ a {
 
 
 @import "footer";
+@import "news";
 // //////////////////////////////////////////////

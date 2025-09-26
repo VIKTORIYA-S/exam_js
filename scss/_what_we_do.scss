@@ -8,17 +8,6 @@
         background: $color-black;
     }
 
-    &__subtitle {
-        font-family: $font-montserrat;
-        font-weight: 700;
-        font-size: 44px;
-        line-height: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-black;
-        margin-bottom: 90px;
-    }
-
     &__card {
         max-width: 1385px;
         width: 100%;
@@ -112,6 +101,17 @@
         gap: 10px;
     }
 }
+
+.section__subtitle {
+        font-family: $font-montserrat;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-bottom: 90px;
+    }
 
 .btn {
     width: 190px;

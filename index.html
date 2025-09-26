@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>MONTICELLO</title>
 </head>
 <body>
     <div class="container">
@@ -22,9 +22,9 @@
                     </div>
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a class="nav__link" href="#what-we-do"><span class="dot active"></span>ABOUT US</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>PROJECTS</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>NEWS</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#about"><span class="dot active"></span>ABOUT US</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#what-we-do"><span class="dot"></span>PROJECTS</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#news"><span class="dot"></span>NEWS</a></li>
                             <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>CONTACT</a></li>
                         </ul>
                     </nav>
@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header__content">
+                <div class="header__content" id="about">
                     <h1 class="header__title">SIMPLE &#38; MODERN</h1>
                     <h4 class="header__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h4>
                 </div>
@@ -54,9 +54,9 @@
         <main class="main">
             <div class="arrow main__arrow">&#62;</div>
             <section class="what-we-do" id="what-we-do">
-                <div class="what-we-do__header">
+                <div class="section__header">
                     <hr class="line what-we-do__line">
-                    <h2 class="what-we-do__subtitle">WHAT WE DO</h2>
+                    <h2 class="section__subtitle what-we-do__subtitle">WHAT WE DO</h2>
                 </div>
                 <div class="what-we-do__content">
                     <div class="what-we-do__card">
@@ -93,7 +93,30 @@
                     </div>
                 </div>
             </section>
-                
+            <section class="news" id="news">
+                <div class="wrapper__background">
+                    <div class="section__header">
+                        <hr class="section__line what-we-do__line">
+                        <h2 class="section__subtitle news__subtitle">LATEST NEWS</h2>
+                    </div>
+                    <div class="news__slider">
+                        <div class="arrow news__arrow_left">&#60;</div>
+                        <div class="news__slider_line">
+                            <div class="news__card"></div>
+                            <div class="news__card"></div>
+                            <div class="news__card"></div>
+                        </div>
+                        <div class="arrow news__arrow_right">&#62;</div>
+                    </div>
+                    <div class="header__dots">
+                    <div class="wrapper__dot"><span class="header__dot active"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    <div class="wrapper__dot"><span class="header__dot"></span></div>
+                </div>
+                </div>
+            </section>
         </main>
         <div class="map" id="map" style="height: 700px"></div>
         <footer class="footer">
