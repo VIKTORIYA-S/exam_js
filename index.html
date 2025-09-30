@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/icons/favicon_1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <link rel="stylesheet" href="css/style.css">
     <title>MONTICELLO</title>
 </head>
+
 <body>
     <div class="container">
         <div class="header__background">
             <header class="header">
+                <!-- новое -->
+                <div class="header__images">
+                    <img class="header__img fadein" src="assets/img/tu-tram-pham-202263 1.png" alt="">
+                </div>
+                <!-- новое -->
+
                 <div class="header__menu">
                     <div class="logo">
                         <img class="logo__img" src="assets/img/logo.png" alt="">
                     </div>
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a class="nav__link" href="#about"><span class="dot active"></span>ABOUT US</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#what-we-do"><span class="dot"></span>PROJECTS</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#news"><span class="dot"></span>NEWS</a></li>
-                            <li class="nav__item"><a class="nav__link" href="#"><span class="dot"></span>CONTACT</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#about"><span
+                                        class="dot active"></span>ABOUT US</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#what-we-do"><span
+                                        class="dot"></span>PROJECTS</a></li>
+                            <li class="nav__item"><a class="nav__link" href="#news"><span class="dot"></span>NEWS</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="#contact"><span class="dot"></span>CONTACT</a>
+                            </li>
                         </ul>
                     </nav>
                     <div class="social">
                         <ul class="social__list">
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_1.svg" alt=""></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_2.svg" alt=""></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_3.svg" alt=""></a></li>
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_1.svg"
+                                        alt=""></a></li>
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_2.svg"
+                                        alt=""></a></li>
+                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_3.svg"
+                                        alt=""></a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,12 +79,13 @@
                     <div class="what-we-do__card">
                         <div class="what-we-do__card_img">
                             <div class="what-we-do__card-background"></div>
-                            <img class="what-we-do__card-img" src="assets/img/Mask Group.png" alt="">
+                            <img class="what-we-do__card-img" src="assets/img/mask_group_2.png" alt="">
                         </div>
                         <div class="what-we-do__card_content">
                             <h4 class="what-we-do__card-subtitle">ONE WORLD</h4>
                             <h2 class="what-we-do__card-title">TRADE CENTER</h2>
-                            <p class="what-we-do__card-text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
+                            <p class="what-we-do__card-text">Increasing prosperity in our lives can be accomplished by
+                                having the right frame of mind. The truth is, our thoughts are very powerful.</p>
                             <button class="btn what-we-do__card-button">MORE DETAILS</button>
                             <div class="what-we-do__card-city">
                                 <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
@@ -78,12 +96,15 @@
                     <div class="what-we-do__card what-we-do__card_reverse">
                         <div class="what-we-do__card_img">
                             <div class="what-we-do__card-background"></div>
-                            <img class="what-we-do__card-img what-we-do__card-img_1" src="assets/img/Mask Group_1.png" alt="">
+                            <img class="what-we-do__card-img what-we-do__card-img_1" src="assets/img/mask_group_1.png"
+                                alt="">
                         </div>
                         <div class="what-we-do__card_content">
                             <h4 class="what-we-do__card-subtitle">INTERNATIONAL</h4>
                             <h2 class="what-we-do__card-title">COMMERCE CENTRE</h2>
-                            <p class="what-we-do__card-text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</p>
+                            <p class="what-we-do__card-text">Successful businesses have many things in common, today
+                                we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+                            </p>
                             <button class="btn what-we-do__card-button">MORE DETAILS</button>
                             <div class="what-we-do__card-city">
                                 <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
@@ -102,35 +123,95 @@
                     <div class="news__slider">
                         <div class="arrow news__arrow_left">&#60;</div>
                         <div class="news__slider_line">
-                            <div class="news__card"></div>
-                            <div class="news__card"></div>
-                            <div class="news__card"></div>
+                            <div class="news__card">
+                                <img class="news__card_img" src="assets/img/Image.jpg" alt="">
+                                <h3 class="news__card_title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
+                                <p class="news__card_text">Free directories: directories are perfect for customers that
+                                    are searching for...</p>
+                                <div class="news__card_info">
+                                    <img class="news__card_info-img" src="assets/img/photos-13323TAfapiSrc9IO23_1.png"
+                                        alt="">
+                                    <div class="news__card_info-content">
+                                        <h5 class="news__card_info-name">ALJA BRUN</h5>
+                                        <p class="news__card_info-date">20 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__card">
+                                <img class="news__card_img" src="assets/img/Image.png" alt="">
+                                <h3 class="news__card_title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                                <p class="news__card_text">Having a home based business is a wonderful asset to your
+                                    life...</p>
+                                <div class="news__card_info">
+                                    <img class="news__card_info-img" src="assets/img/photos-13323vsWmKApDZJIh_1.png"
+                                        alt="">
+                                    <div class="news__card_info-content">
+                                        <h5 class="news__card_info-name">DOMINIC FREEMAN</h5>
+                                        <p class="news__card_info-date">13 Dec 2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news__card">
+                                <img class="news__card_img" src="assets/img/Image_1.jpg" alt="">
+                                <h3 class="news__card_title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
+                                <p class="news__card_text">There are many things that are important to catalog design...
+                                </p>
+                                <div class="news__card_info">
+                                    <img class="news__card_info-img" src="assets/img/photos-13323TAfapiSrc9IO_1.png"
+                                        alt="">
+                                    <div class="news__card_info-content">
+                                        <h5 class="news__card_info-name">ALICE WARD</h5>
+                                        <p class="news__card_info-date">30 Nov 2019</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="arrow news__arrow_right">&#62;</div>
                     </div>
-                    <div class="header__dots">
-                    <div class="wrapper__dot"><span class="header__dot active"></span></div>
-                    <div class="wrapper__dot"><span class="header__dot"></span></div>
-                    <div class="wrapper__dot"><span class="header__dot"></span></div>
-                    <div class="wrapper__dot"><span class="header__dot"></span></div>
-                    <div class="wrapper__dot"><span class="header__dot"></span></div>
-                </div>
+                    <div class="slider__dots">
+                        <div class="wrapper__dot"><span class="header__dot active"></span></div>
+                        <div class="wrapper__dot"><span class="header__dot"></span></div>
+                        <div class="wrapper__dot"><span class="header__dot"></span></div>
+                        <div class="wrapper__dot"><span class="header__dot"></span></div>
+                        <div class="wrapper__dot"><span class="header__dot"></span></div>
+                    </div>
                 </div>
             </section>
+            <section class="gallery">
+                <div class="section__header">
+                    <hr class="line what-we-do__line">
+                    <h2 class="section__subtitle gallery__subtitle">GALLERY</h2>
+                </div>
+                <div class="gallery__content">
+                    <div class="gallery__card_left">
+                        <img class="gallery__card_img" src="assets/img/mask_group.png" alt="">
+                    </div>
+                    <div class="gallery__card_right">
+                        <img class="gallery__card_img" src="assets/img/image_12.png" alt="">
+                        <img class="gallery__card_img" src="assets/img/image_13.png" alt="">
+                        <img class="gallery__card_img" src="assets/img/image_14.png" alt="">
+                        <img class="gallery__card_img" src="assets/img/image_15.png" alt="">
+                    </div>
+                </div>
+                <button class="btn gallery__button">SEE MORE</button>
+            </section>
+            <div class="map" id="map" style="height: 700px"></div>
         </main>
-        <div class="map" id="map" style="height: 700px"></div>
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="header__menu footer__upper-block">
                 <div class="logo">
-                        <img class="logo__img" src="assets/img/logo.png" alt="">
-                    </div>
-                    <div class="social">
-                        <ul class="social__list">
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_1.svg" alt=""></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_2.svg" alt=""></a></li>
-                            <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_3.svg" alt=""></a></li>
-                        </ul>
-                    </div>
+                    <img class="logo__img" src="assets/img/logo.png" alt="">
+                </div>
+                <div class="social">
+                    <ul class="social__list">
+                        <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_1.svg"
+                                    alt=""></a></li>
+                        <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_2.svg"
+                                    alt=""></a></li>
+                        <li class="social__item"><a class="social__link" href="#"><img src="assets/icons/svg_3.svg"
+                                    alt=""></a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__lower-block">
                 <p class="footer__text">Copyrights &#169; 2020 Montichello</p>
@@ -139,6 +220,8 @@
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/galery.js"></script>
+    <script src="scripts/script.js" defer></script>
 </body>
+
 </html>

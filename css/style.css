@@ -113,6 +113,68 @@
   margin-bottom: 60px;
 }
 
+.gallery {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+.gallery__content, .gallery__content_1 {
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+}
+.gallery__card_left {
+  width: 49.5%;
+  height: 100%;
+  position: relative;
+}
+.gallery__card_left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99.5%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.gallery__card_right {
+  width: 49.5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery__card_left::before {
+  pointer-events: none;
+}
+.gallery__card_left img, .gallery__card_right img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.gallery__card_left img:hover, .gallery__card_right img:hover {
+  cursor: pointer;
+}
+.gallery__button {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0;
+}
+.gallery__card_img {
+  width: 100%; /* чтобы занимала всю ширину блока */
+  height: 400px; /* фиксированная высота */
+  object-fit: cover;
+  display: block;
+}
+.gallery__card_right img {
+  width: calc(50% - 5px); /* 2 картинки в ряд */
+  height: 195px; /* половина от 400px с отступами */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +195,6 @@ body {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  height: 5000px;
   display: flex;
   flex-direction: column;
 }
@@ -152,6 +213,8 @@ a {
   height: 800px;
   background: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
   margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 1220px) {
   .header__background {
@@ -161,12 +224,40 @@ a {
 }
 
 .header {
-  background-image: url(../assets/img/tu-tram-pham-202263\ 1.png);
+  width: 100%;
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
   height: 100%;
   position: relative;
+}
+.header__images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.header__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+.header__images::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2C4058;
+  opacity: 0;
+  z-index: 5;
 }
 .header__menu {
   max-width: 1170px;
@@ -176,6 +267,8 @@ a {
   padding-top: 52px;
   margin: 0 auto;
   margin-bottom: 123px;
+  position: relative;
+  z-index: 3;
 }
 .header__content {
   max-width: 939px;
@@ -184,6 +277,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 .header__title {
   font-family: "Montserrat", sans-serif;
@@ -217,11 +312,12 @@ a {
   width: 20px;
   position: absolute;
   top: 295px;
-  right: 52px;
+  left: 94%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 3;
 }
 .header__sentinel {
   position: absolute;
@@ -246,26 +342,12 @@ a {
   cursor: pointer;
   z-index: 3;
 }
-.arrow--fixed {
-  position: fixed; /* переключаем, когда блок прокручен */
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.arrow--outside {
-  color: #2C4058;
-  border: 1px solid #2C4058;
-}
 
 .header__arrow {
-  position: fixed;
+  position: absolute;
   top: 680px;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.main {
-  flex: 1 1 auto;
 }
 
 .main__arrow {
@@ -327,6 +409,8 @@ a {
   height: 10px;
   border-radius: 50%;
   border: 1px solid #fff;
+  background-color: transparent;
+  z-index: 23;
 }
 
 .active {
@@ -369,26 +453,22 @@ a {
 }
 
 .img {
-  width: 840px;
-  height: 437px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   opacity: 0;
   transition: opacity 1s ease;
-  box-shadow: rgba(192, 191, 191, 0.5254901961) 3px 3px 5px;
-}
-
-.img.fadein {
-  opacity: 1;
-}
-
-.img.fadeout {
-  opacity: 0;
+  z-index: -2;
 }
 
 #map {
   width: 100%;
   height: 700px;
   z-index: 1;
+  filter: hue-rotate(459deg) brightness(0.9) contrast(1.2);
 }
 
 .footer {
@@ -450,12 +530,60 @@ a {
   max-width: 370px;
   width: 100%;
   height: 514px;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  border: 1px solid red;
   background: #fff;
-  color: #fff;
+  color: #2C4058;
+}
+.news__card_title {
+  max-width: 330px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 115%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #2C4058;
+}
+.news__card_text {
+  max-width: 330px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  color: #2C4058;
+}
+.news__card_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.news__card_info-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+.news__card_info-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #2C4058;
+  margin-bottom: 6px;
+}
+.news__card_info-date {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #55B7FF;
+}
+.news__card_info-content {
+  padding-top: 7px;
 }
 
 .section__line {
@@ -464,4 +592,11 @@ a {
   margin: 0 auto;
   margin-bottom: 30px;
   background: #fff;
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */
