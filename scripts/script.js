@@ -2,8 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-const title = document.querySelector('.header__title');
-const subtitle = document.querySelector('.header__subtitle');
 const headerContent = document.querySelector('.header__content');
 const whatWeDo = document.querySelector('.what-we-do');
 const arrow = document.querySelector('.arrow');
@@ -13,7 +11,9 @@ const headerBg = document.querySelector('.header__background');
 
 
 // СЛАЙДЕР (1-Й ЭКРАН) /////////////////////////////////////////////////////////////////////////////////
+const headerTitles = ['SIMPLE & MODERN', 'ELEGANT & TIMELESS', 'SHAPE & FUNCTION', 'PURE & MINIMAL', 'SPACE & LIGHT', 'ART & STRUCTURE'];
 
+const headerTitle = document.querySelector('.header__title');
  const wrapperDots = document.querySelectorAll('.wrapper__dot');
   const headerDots = document.querySelectorAll('.header__dot');
   const headerImagesContainer = document.querySelector('.header__images');
@@ -41,6 +41,7 @@ const headerBg = document.querySelector('.header__background');
       newImg.classList.add('header__img');
       headerImagesContainer.style.opacity = 0.2;
       headerImagesContainer.appendChild(newImg);
+      headerTitle.classList.add('typing');
 
 
       requestAnimationFrame(() => {
@@ -123,38 +124,49 @@ window.addEventListener('scroll', scrollHandler);
 
 
 // КАРТА ////////////////////////////
-const map = L.map('map', {
-  center: [50.45, 30.52],
-  zoom: 13,
-  scrollWheelZoom: false
-});
+
+  const map = L.map('map', {
+      center: [50.45, 30.52],
+      zoom: 13,
+      scrollWheelZoom: false
+    });
+
+    const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const customIcon = L.icon({
+      iconUrl: 'assets/icons/png-marker.jpg',
+      iconSize: [60, 60],
+      iconAnchor: [10, 60],
+      className: 'custom-icon'
+    });
+
+    L.marker([50.45, 30.52], { icon: customIcon })
+      .addTo(map)
+      .bindPopup("<b>Hi! I'm here! 💜")
+
+    function setMood(mode) {
+      const mapEl = document.getElementById('map');
+      switch (mode) {
+        case 'default':
+          mapEl.style.filter = 'none';
+          break;
+        case 'violet':
+          mapEl.style.filter = 'hue-rotate(270deg) brightness(1.2) saturate(1.3)';
+          break;
+        case 'night':
+          mapEl.style.filter = 'brightness(0.6) contrast(1.2)';
+          break;
+      }
+    }
 
 
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; CartoDB',
-  subdomains: 'abcd',
-  maxZoom: 19
-}).addTo(map);
 
 
-// 🌍 Кастомный tileLayer (можно заменить на стилизованный)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
 
-// 📍 Кастомный маркер
-const customIcon = L.icon({
-  iconUrl: 'assets/icons/png-marker.jpg',
-  iconSize: [60, 60],
-  iconAnchor: [40, 50],
-  popupAnchor: [0, -45]
-});
-
-L.marker([50.45, 30.52], { icon: customIcon })
-  .addTo(map)
-  .bindPopup("<b>Hi! I'm here!")
-  .openPopup();
+  });
 
 
 
@@ -166,4 +178,3 @@ L.marker([50.45, 30.52], { icon: customIcon })
 
 
 
-});
