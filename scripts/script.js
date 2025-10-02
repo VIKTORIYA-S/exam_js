@@ -29,6 +29,7 @@ const headerTitle = document.querySelector('.header__title');
 
   wrapperDots.forEach((dotWrapper, i) => {
     dotWrapper.addEventListener('click', () => {
+      chengeTitle();
 
       // Обновляем активную точку
       headerDots.forEach(dot => dot.classList.remove('active'));
@@ -55,6 +56,17 @@ const headerTitle = document.querySelector('.header__title');
       }, 1000);
     });
   });
+
+function chengeTitle() {
+  headerTitles.forEach((title, i) => {
+    title++;
+    headerTitle.classList.remove('typing');
+    headerTitle.textContent = headerTitles[Math.floor(Math.random() * headerTitles.length)];
+    console.log(headerTitle);
+  })
+}
+
+
 
 
 

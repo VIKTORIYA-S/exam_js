@@ -171,8 +171,8 @@
   display: block;
 }
 .gallery__card_right img {
-  width: calc(50% - 5px); /* 2 картинки в ряд */
-  height: 195px; /* половина от 400px с отступами */
+  width: calc(50% - 5px);
+  height: 195px;
 }
 
 * {
@@ -443,13 +443,13 @@ a {
 }
 
 .fadeout {
-  opacity: 0; /* изначально невидим */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .fadein {
-  opacity: 1; /* конечное значение */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .img {
@@ -739,4 +739,4 @@ a {
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}
