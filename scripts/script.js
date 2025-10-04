@@ -67,14 +67,7 @@ function chengeTitle() {
 }
 
 
-
-
-
 // МЕДЛЕННЫЙ СКРОЛЛ //////////////////////////////////////////////////////////////////////////////
-// const nextSection = header.nextElementSibling;
-// console.log(nextSection);
-
-
 let scrollTimer = null;
 
 arrow.addEventListener('click', (e) => {
@@ -87,32 +80,12 @@ const targetY = window.scrollY + window.innerHeight;
 function startScroll(nextTop) {
   scrollTimer = setInterval(() => {
     window.scrollBy(0, 10);
-
-    //  const nextTop = nextSection.getBoundingClientRect().top;
-
-    //   if (nextTop <= 0) {
-    //     clearInterval(scrollTimer);
-    //     scrollTimer = null;
-    //   }
-
-
   }, 16);
 }
 
 document.addEventListener('click', () => {
     clearInterval(scrollTimer);
 });
-
-
-// window.addEventListener('scroll', () => {
-//   const headerBottom = header.getBoundingClientRect().bottom;
-
-//   // if (headerBottom <= 735) {
-//   //   arrow.classList.add('arrow--outside');
-//   // } else {
-//   //   arrow.classList.remove('arrow--outside');
-//   // }
-// });
 
 
 //  СМЕНА ПОЗИЦИИ ИЗОБРАЖЕНИЙ ///////////////////////////////////////////////////////////////////////////
@@ -158,27 +131,24 @@ window.addEventListener('scroll', scrollHandler);
       .addTo(map)
       .bindPopup("<b>Hi! I'm here! 💜")
 
-    function setMood(mode) {
+      });
+
+      function setMood(mode) {
       const mapEl = document.getElementById('map');
       switch (mode) {
         case 'default':
           mapEl.style.filter = 'none';
           break;
         case 'violet':
-          mapEl.style.filter = 'hue-rotate(270deg) brightness(1.2) saturate(1.3)';
+          mapEl.style.filter = 'hue-rotate(270deg) brightness(1.15) saturate(1.2)';
           break;
         case 'night':
           mapEl.style.filter = 'brightness(0.6) contrast(1.2)';
           break;
       }
     }
-
-
-
-
-
-
-  });
+    setMood('violet');
+setMood('default');
 
 
 

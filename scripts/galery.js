@@ -2,7 +2,7 @@
 
 
 const KEY = 'zmoPmFDtLB1yq2aTz_WzCj7oQ-pcoTVf7tRDMIUBg2k';
-let page = 1; // номер текущей страницы
+let page = 1;
 const btn = document.querySelector('.gallery__button');
 const img = document.querySelectorAll('.gallery__card_img');
 
@@ -23,7 +23,7 @@ function render(data) {
   const newBlock = document.createElement('div');
   newBlock.className = 'gallery__content';
 
-  // левая колонка
+  // левый блок
   const left = document.createElement('div');
   left.className = 'gallery__card_left';
 
@@ -33,13 +33,10 @@ function render(data) {
   left.appendChild(imgLeft);
 
  imgLeft.addEventListener('click', () => {
-  window.open(data.results[0].urls.full, '_blank'); // открываем большое изображение
-});
+  window.open(data.results[0].urls.full, '_blank');
 
-
-
-
-  // правая колонка
+ });
+  // создание правого блока
   const right = document.createElement('div');
   right.className = 'gallery__card_right';
 
@@ -58,13 +55,13 @@ function render(data) {
   newBlock.appendChild(left);
   newBlock.appendChild(right);
 
-  // вставляем новый блок ПЕРЕД кнопкой
+  // вставить новый блок ПЕРЕД кнопкой
   btn.insertAdjacentElement('beforebegin', newBlock);
 }
 
-// обработчик кнопки
+// клик по кнопку "see more"
 btn.addEventListener('click', async () => {
-  page++; // увеличиваем номер страницы
+  page++;
   const data = await fetchHandler();
   if (data && data.results.length > 0) {
     render(data);
@@ -76,7 +73,7 @@ btn.addEventListener('click', async () => {
 
 fetchHandler();
 
-
+// левая картинка
 const localLeft = document.querySelector('.gallery__card_left img');
 localLeft.addEventListener('click', () => {
     window.open(localLeft.src, '_blank');
@@ -88,4 +85,17 @@ localRightImgs.forEach(img => {
     img.addEventListener('click', () => {
         window.open(img.src, '_blank');
     });
+});
+
+// новая кнопка "Удалить"
+const newButton = document.createElement('button');
+newButton.textContent = 'Delete';
+newButton.className = 'btn gallery__button';
+newButton.style.marginLeft = '20px';
+btn.insertAdjacentElement('afterend', newButton);
+
+// клик по кнопке
+newButton.addEventListener('click', () => {
+    const galleryContent = document.querySelector('.gallery__content');
+    galleryContent.remove();
 });

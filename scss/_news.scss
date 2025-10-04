@@ -22,6 +22,7 @@
         height: 514px;
         background: $color-white;
         color: $color-black;
+        cursor: pointer;
 
         &_title {
             max-width: 330px;
@@ -140,6 +141,12 @@
     outline: none;
 }
 
+.slick-prev:hover,
+.slick-next:hover {
+    background: $color-white;
+    transition: all 0.5s ease;
+}
+
 .slick-prev::before,
 .slick-next::before {
     content: ">";
@@ -149,6 +156,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $color-white;
+}
+
+.slick-next:hover::before,
+.slick-prev:hover::before {
+    color: $color-black;
+    transition: all 0.5s ease;
 }
 
 .slick-prev::before {

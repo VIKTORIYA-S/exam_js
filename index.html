@@ -29,7 +29,9 @@
 
                 <div class="header__menu">
                     <div class="logo">
+                    <a href="#">
                         <img class="logo__img" src="./assets/img/logo.png" alt="">
+                    </a>
                     </div>
                     <nav class="nav">
                         <ul class="nav__list">
@@ -103,7 +105,7 @@
                             <h2 class="what-we-do__card-title">TRADE CENTER</h2>
                             <p class="what-we-do__card-text">Increasing prosperity in our lives can be accomplished by
                                 having the right frame of mind. The truth is, our thoughts are very powerful.</p>
-                            <button class="btn what-we-do__card-button">MORE DETAILS</button>
+                            <button class="btn what-we-do__card-button btn_1">MORE DETAILS</button>
                             <div class="what-we-do__card-city">
                                 <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
                                 <p class="what-we-do__card-city-name">New York City, United States - 1776 feet </p>
@@ -113,8 +115,7 @@
                     <div class="what-we-do__card what-we-do__card_reverse">
                         <div class="what-we-do__card_img">
                             <div class="what-we-do__card-background"></div>
-                            <img class="what-we-do__card-img what-we-do__card-img_1" src="assets/img/mask_group_1.png"
-                                alt="">
+                            <img class="what-we-do__card-img what-we-do__card-img_1" src="assets/img/mask_group_1.png" alt="">
                         </div>
                         <div class="what-we-do__card_content">
                             <h4 class="what-we-do__card-subtitle">INTERNATIONAL</h4>
@@ -122,12 +123,25 @@
                             <p class="what-we-do__card-text">Successful businesses have many things in common, today
                                 we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
                             </p>
-                            <button class="btn what-we-do__card-button">MORE DETAILS</button>
+                            <button class="btn what-we-do__card-button btn_2">MORE DETAILS</button>
                             <div class="what-we-do__card-city">
                                 <img class="what-we-do__card-city-location" src="assets/icons/location.svg" alt="">
                                 <p class="what-we-do__card-city-name">New York City, United States - 1776 feet </p>
                             </div>
                         </div>
+                        <div class="modal">
+                    <div class="modal__content">
+                        <div class="modal__close">X</div>
+                        <img class="modal__img" src="./assets/img/mask_group_2.png" alt="">
+                        <div class="modal__info">
+                            <h4 class="modal__subtitle">INTERNATIONAL COMMERCE CENTER</h4>
+                            <p class="modal__text">Successful businesses have many things in common, today we’ll look at the
+                                big ‘R’ of recognition and how a digital advertising network may help. Free directories:
+                                directories are perfect for customers that are searching for a particular product or service.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </section>
@@ -249,7 +263,7 @@
             <div class="map" id="map" style="height: 700px">
                 <div class="controls">
                     <button class="map__btn_1" onclick="setMood('default')">Обычная</button>
-                    <button class="map__btn_2" onclick="setMood('violet')">Сиренево-голубая</button>
+                    <button class="map__btn_2" onclick="setMood('violet')">Розово-<span class="orange">оранжевая</span></button>
                     <button class="map__btn_3" onclick="setMood('night')">Ночная</button>
                 </div>
             </div>
@@ -265,7 +279,9 @@
         <footer class="footer" id="contact">
             <div class="header__menu footer__upper-block">
                 <div class="logo">
-                    <img class="logo__img" src="assets/img/logo.png" alt="">
+                    <a href="#">
+                        <img class="logo__img" src="assets/img/logo.png" alt="">
+                    </a>
                 </div>
                 <div class="social">
                     <ul class="social__list">
@@ -301,13 +317,12 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src=""></script>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/jquery_slider.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts/galery.js"></script>
-    <!-- <script src="scripts/slider_news.js"></script> -->
     <script src="scripts/script.js" defer></script>
 </body>
 

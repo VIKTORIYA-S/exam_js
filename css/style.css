@@ -5,6 +5,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
   background: #2C4058;
+  position: relative;
 }
 .what-we-do__card {
   max-width: 1385px;
@@ -116,6 +117,87 @@
   background: #2C4058;
   color: #fff;
   transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: #55B7FF;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal__content {
+  background-color: #fff;
+  margin: 15% auto;
+  border: 1px solid #2C4058;
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #169cfb;
+  cursor: pointer;
+}
+.modal__close:hover {
+  transform: rotate(-270deg);
+}
+.modal__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.modal__info {
+  position: absolute;
+  top: 300px;
+  right: 50px;
+  width: 540px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: rgba(85, 184, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.modal__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2C4058;
+  margin-bottom: 20px;
+}
+.modal__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #2C4058;
+  width: 80%;
+}
+
+.open {
+  display: flex;
 }
 
 .gallery {
@@ -163,6 +245,8 @@
 }
 .gallery__card_left img:hover, .gallery__card_right img:hover {
   cursor: pointer;
+  transform: translate(5px, 5px);
+  transition: all 0.5s ease;
 }
 .gallery__button {
   margin: 0 auto;
@@ -346,6 +430,12 @@ a {
   color: #fff;
   cursor: pointer;
   z-index: 3;
+}
+
+.arrow:hover {
+  color: #2C4058;
+  background: #fff;
+  transition: all 0.5s ease;
 }
 
 .header__arrow {
@@ -596,6 +686,7 @@ a {
   height: 514px;
   background: #fff;
   color: #2C4058;
+  cursor: pointer;
 }
 .news__card_title {
   max-width: 330px;
@@ -706,6 +797,12 @@ a {
   outline: none;
 }
 
+.slick-prev:hover,
+.slick-next:hover {
+  background: #fff;
+  transition: all 0.5s ease;
+}
+
 .slick-prev::before,
 .slick-next::before {
   content: ">";
@@ -715,6 +812,12 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+
+.slick-next:hover::before,
+.slick-prev:hover::before {
+  color: #2C4058;
+  transition: all 0.5s ease;
 }
 
 .slick-prev::before {
