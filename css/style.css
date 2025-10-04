@@ -559,7 +559,7 @@ a {
 .news {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(../assets/img/Background.jpg);
+  background-image: url(../assets/img/background.jpg);
 }
 .news__subtitle {
   color: #fff;
