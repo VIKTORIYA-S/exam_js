@@ -194,11 +194,6 @@ a {
         top: 680px;
         left: 50%;
         transform: translate(-50%, -50%);
-
-        // &:hover {
-        //     color: $color-black;
-        //     border: 1px solid $color-black;
-        // }
     }
 
     .main__arrow {
@@ -345,8 +340,7 @@ a {
 }
 
 .custom-icon {
-    filter: hue-rotate(999deg) brightness(0.9) contrast(1.2);
-    // transition: filter 0.5s ease;
+    filter: hue-rotate(999deg) brightness(0.9) contrast(-1.2);
 }
 
 .controls {
@@ -354,7 +348,7 @@ a {
       top: 12px;
       left: 50px;
       z-index: 1000;
-      background: #4be251;
+      background: #4bc6e299;
       padding: 8px;
       border-radius: 6px;
       font-family: sans-serif;
@@ -380,12 +374,22 @@ a {
     }
 
     .map__btn_2 {
-        color: #17ed3e;
+        color: #ed1782;
         font-size: 20px;
     }
 
     .map__btn_3 {
+        color: #360500;
+        font-size: 20px;
+    }
+
+    .leaflet-popup-content-wrapper {
         color: #ed1703;
+        font-size: 20px;
+    }
+
+    .orange {
+        color: #ed7803;
         font-size: 20px;
     }
 
