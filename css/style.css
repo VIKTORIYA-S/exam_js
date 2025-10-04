@@ -112,6 +112,11 @@
   padding: 16px 40px;
   margin-bottom: 60px;
 }
+.btn:hover {
+  background: #2C4058;
+  color: #fff;
+  transition: all 0.5s ease;
+}
 
 .gallery {
   padding-top: 150px;
@@ -438,8 +443,21 @@ a {
   align-items: center;
   justify-content: center;
 }
+.social__item:hover {
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
 .social__link {
   display: block;
+}
+.social__img {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+.social__item:hover .social__img {
+  fill: #7E5AFF;
+  transition: all 0.5s ease;
 }
 
 .fadeout {

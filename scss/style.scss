@@ -306,8 +306,24 @@ a {
         justify-content: center;
     }
 
+    &__item:hover {
+        background-color: $color-white;
+        transition: all 0.5s ease;
+    }
+
     &__link {
         display: block;
+    }
+
+    &__img {
+        width: 20px;
+        height: 20px;
+        fill: $color-white;
+    }
+
+    &__item:hover .social__img {
+        fill: $color-hover;
+        transition: all 0.5s ease;
     }
 }
 
