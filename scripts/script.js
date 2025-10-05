@@ -62,7 +62,6 @@ function chengeTitle() {
     title++;
     headerTitle.classList.remove('typing');
     headerTitle.textContent = headerTitles[Math.floor(Math.random() * headerTitles.length)];
-    console.log(headerTitle);
   })
 }
 

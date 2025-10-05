@@ -194,6 +194,11 @@ a {
         top: 680px;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        &:hover {
+            color: $color-black;
+            border: 1px solid $color-black;
+        }
     }
 
     .main__arrow {
@@ -230,10 +235,58 @@ a {
         font-family: $font-source;
         font-weight: 400;
         font-size: 14px;
-        line-height: 100%;
+        // line-height: 100%;
         color: $color-white;
+        position: relative;
+         cursor: pointer;
+         line-height: 1.5px;
+         text-decoration: none;
     }
+
+    // &__link:hover {
+    //     font-weight: 600;
+    //     transition: all 0.5s ease;
+    // }
+
+    // &__link::after {
+    //     display: block;
+    //     position: absolute;
+    //     left: 0;
+    //     width: 0;
+    //     height: 3px;
+    //     background-color: $color-white;
+    //     content: "";
+    //     transition: width 0.4s ease-out;
+    // }
+
+    // &__linka:hover::after {
+    //     margin-top: 2px;
+    //     width: 100%;
+    //     }
 }
+
+.nav__link:hover {
+        font-weight: 600;
+        transition: all 0.5s ease;
+    }
+
+    .nav__link::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        width: 0;
+        height: 2px;
+        background-color: $color-white;
+        content: "";
+        transition: width 0.4s ease-out;
+        margin-top: 3px;
+    }
+
+    .nav__link:hover::after {
+        margin-top: 2px;
+        width: 100%;
+        }
 
 .wrapper__dot {
     width: 40px;
@@ -340,7 +393,8 @@ a {
 }
 
 .custom-icon {
-    filter: hue-rotate(999deg) brightness(0.9) contrast(-1.2);
+    filter: hue-rotate(999deg) brightness(0.9) contrast(1.2);
+    // transition: filter 0.5s ease;
 }
 
 .controls {
@@ -348,7 +402,7 @@ a {
       top: 12px;
       left: 50px;
       z-index: 1000;
-      background: #4bc6e299;
+      background: #4be251;
       padding: 8px;
       border-radius: 6px;
       font-family: sans-serif;
@@ -374,22 +428,12 @@ a {
     }
 
     .map__btn_2 {
-        color: #ed1782;
+        color: #17ed3e;
         font-size: 20px;
     }
 
     .map__btn_3 {
-        color: #360500;
-        font-size: 20px;
-    }
-
-    .leaflet-popup-content-wrapper {
         color: #ed1703;
-        font-size: 20px;
-    }
-
-    .orange {
-        color: #ed7803;
         font-size: 20px;
     }
 

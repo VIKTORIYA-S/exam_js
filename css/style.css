@@ -161,7 +161,7 @@
 }
 .modal__info {
   position: absolute;
-  top: 300px;
+  top: 220px;
   right: 50px;
   width: 540px;
   height: 340px;
@@ -444,6 +444,10 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.header__arrow:hover {
+  color: #2C4058;
+  border: 1px solid #2C4058;
+}
 
 .main__arrow {
   margin: 0 auto;
@@ -478,8 +482,34 @@ a {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 100%;
   color: #fff;
+  position: relative;
+  cursor: pointer;
+  line-height: 1.5px;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.nav__link::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  content: "";
+  transition: width 0.4s ease-out;
+  margin-top: 3px;
+}
+
+.nav__link:hover::after {
+  margin-top: 2px;
+  width: 100%;
 }
 
 .wrapper__dot {
@@ -581,7 +611,7 @@ a {
 }
 
 .custom-icon {
-  filter: hue-rotate(999deg) brightness(0.9) contrast(-1.2);
+  filter: hue-rotate(999deg) brightness(0.9) contrast(1.2);
 }
 
 .controls {
@@ -589,7 +619,7 @@ a {
   top: 12px;
   left: 50px;
   z-index: 1000;
-  background: rgba(75, 198, 226, 0.6);
+  background: #4be251;
   padding: 8px;
   border-radius: 6px;
   font-family: sans-serif;
@@ -615,22 +645,12 @@ a {
 }
 
 .map__btn_2 {
-  color: #ed1782;
+  color: #17ed3e;
   font-size: 20px;
 }
 
 .map__btn_3 {
-  color: #360500;
-  font-size: 20px;
-}
-
-.leaflet-popup-content-wrapper {
   color: #ed1703;
-  font-size: 20px;
-}
-
-.orange {
-  color: #ed7803;
   font-size: 20px;
 }
 
@@ -693,7 +713,6 @@ a {
 .news__card {
   max-width: 370px;
   width: 100%;
-  height: 514px;
   background: #fff;
   color: #2C4058;
   cursor: pointer;
@@ -718,6 +737,8 @@ a {
   margin: 0 auto;
   margin-bottom: 39px;
   color: #2C4058;
+  overflow: hidden;
+  transition: height 1s ease;
 }
 .news__card_info {
   display: flex;
@@ -774,7 +795,6 @@ a {
 
 .slick-slide {
   width: 370px;
-  height: 514px;
   margin-right: 20px;
   background: #fff;
 }
