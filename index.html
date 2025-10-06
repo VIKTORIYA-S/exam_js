@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/icons/favicon_1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,7 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-
+    <link rel="icons" href="assets/icons/favicon_1.png">
     <link rel="stylesheet" href="css/style.css">
     <title>MONTICELLO</title>
 </head>
@@ -42,6 +41,11 @@
                                         class="dot nav__dot"></span>CONTACT</a>
                             </li>
                         </ul>
+                        <div class="nav__burger">
+                        <span class="nav__line"></span>
+                        <span class="nav__line"></span>
+                        <span class="nav__line"></span>
+                    </div>
                     </nav>
                     <div class="social">
                         <ul class="social__list">
@@ -265,10 +269,36 @@
                 </div>
             </div>
             <section class="form">
-                <div class="wrapper__background">
+                <div class="form__wrapper">
                     <div class="section__header">
                         <hr class="section__line form__line">
                         <h2 class="section__subtitle form__subtitle">GET IN TOUCH</h2>
+                    </div>
+                    <div class="form__container">
+                        <div class="form__content_left">
+                            <div class="form__content_address">
+                                <img class="form__content_img form__content_address-img" src="assets/icons/location.png" alt="" width="25">
+                                <h4 class="form__content_text form__content_address-text">91 Nolan Extensions Suite 670</h4>
+                            </div>
+                            <div class="form__content_tel">
+                                <img class="form__content_img form__content_tel-img" src="assets/icons/tel_1.png" alt="" width="25">
+                                <h4 class="form__content_text form__content_tel-text">+001 356-868-2454</h4>
+                            </div>
+                            <div class="form__content_email">
+                                <img class="form__content_img form__content_email-img" src="assets/icons/mail.png" alt="" width="20">
+                                <h4 class="form__content_text form__content_email-text">montichello@service.com</h4>
+                            </div>
+                            <div class="form__content_time">
+                                <img class="form__content_img form__content_time-img" src="assets/icons/oclock.png" alt="" width="18">
+                                <h4 class="form__content_text form__content_time-text">From 07:05AM to 19:30PM</h4>
+                            </div>
+                        </div>
+                        <form class="form__content_right">
+                            <input class="form__content_right-input" type="text" id="name" placeholder="Name">
+                            <input class="form__content_right-input" type="email" id="email" placeholder="Email">
+                            <button class="btn form__content_right-button">SUBMIT</button>
+                            <p class="error-message"></p>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -321,6 +351,7 @@
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts/slider_news.js"></script>
     <script src="scripts/galery.js"></script>
+    <script src="scripts/form.js"></script>
     <script src="scripts/script.js" defer></script>
 </body>
 

@@ -221,11 +221,20 @@ a {
     justify-content: space-around;
     flex-grow: 1;
 
+    @media screen and (max-width: 900px) {
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+
     &__list {
         max-width: 515px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+            @media screen and (max-width: 900px) {
+        display: none;
+    }
     }
 
     &__link {
@@ -235,7 +244,6 @@ a {
         font-family: $font-source;
         font-weight: 400;
         font-size: 14px;
-        // line-height: 100%;
         color: $color-white;
         position: relative;
          cursor: pointer;
@@ -243,26 +251,36 @@ a {
          text-decoration: none;
     }
 
-    // &__link:hover {
-    //     font-weight: 600;
-    //     transition: all 0.5s ease;
-    // }
+    &__burger {
+        display: none;
+        @media screen and (max-width: 900px) {
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            color: $color-white;
+            cursor: pointer;
+            z-index: 3;
+        }
+    }
 
-    // &__link::after {
-    //     display: block;
-    //     position: absolute;
-    //     left: 0;
-    //     width: 0;
-    //     height: 3px;
-    //     background-color: $color-white;
-    //     content: "";
-    //     transition: width 0.4s ease-out;
-    // }
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 2px;
+        background-color: $color-white;
+    }
 
-    // &__linka:hover::after {
-    //     margin-top: 2px;
-    //     width: 100%;
-    //     }
+    &__line:nth-child(2) {
+        top: 10px;
+    }
+
+    &__line:nth-child(1) {
+        top: 30px;
+    }
 }
 
 .nav__link:hover {
@@ -413,6 +431,10 @@ a {
       padding: 8px;
       border-radius: 6px;
       font-family: sans-serif;
+
+      @media screen and (max-width: 535px) {
+        display: none;
+      }
     }
 
     .controls button {
