@@ -398,6 +398,12 @@ a {
   margin-bottom: 123px;
   position: relative;
   z-index: 3;
+  overflow: hidden;
+}
+@media screen and (max-width: 550px) {
+  .header__menu {
+    flex-wrap: wrap;
+  }
 }
 .header__content {
   max-width: 939px;
@@ -426,6 +432,16 @@ a {
     font-size: 60px;
   }
 }
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header__title {
+    font-size: 30px;
+  }
+}
 .header__subtitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -447,6 +463,13 @@ a {
   flex-direction: column;
   gap: 20px;
   z-index: 3;
+}
+@media screen and (max-width: 550px) {
+  .header__dots {
+    top: 530px;
+    flex-direction: row;
+    left: 30%;
+  }
 }
 .header__sentinel {
   position: absolute;
@@ -502,6 +525,11 @@ a {
 .logo {
   margin-right: 34px;
 }
+@media screen and (max-width: 5500px) {
+  .logo {
+    margin-bottom: 30px;
+  }
+}
 
 .nav {
   display: flex;
@@ -515,15 +543,32 @@ a {
     padding-right: 30px;
   }
 }
+@media screen and (max-width: 550px) {
+  .nav {
+    align-items: flex-start;
+  }
+}
 .nav__list {
   max-width: 515px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 @media screen and (max-width: 900px) {
   .nav__list {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 45px;
+    width: 160px;
+    height: 100%;
+    background-color: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+    padding: 200px 20px;
+    z-index: 5;
+    transform: translateX(200px);
+    transition: transform 0.5s ease-in-out;
+    display: block;
   }
 }
 .nav__link {
@@ -539,6 +584,12 @@ a {
   line-height: 1.5px;
   text-decoration: none;
 }
+@media screen and (max-width: 900px) {
+  .nav__link {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
 .nav__burger {
   display: none;
 }
@@ -550,7 +601,7 @@ a {
     height: 40px;
     color: #fff;
     cursor: pointer;
-    z-index: 3;
+    z-index: 15;
   }
 }
 .nav__line {
@@ -567,6 +618,11 @@ a {
 }
 .nav__line:nth-child(1) {
   top: 30px;
+}
+
+.open {
+  transform: translateX(30px);
+  transition: transform 0.5s ease-in-out;
 }
 
 .nav__link:hover {

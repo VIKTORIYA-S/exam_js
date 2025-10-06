@@ -87,6 +87,14 @@ document.addEventListener('click', () => {
     clearInterval(scrollTimer);
 });
 
+// БУРГЕР МЕНЮ //////////////////////////////////////////////////////////////////////////////
+const burger = document.querySelector('.nav__burger');
+const menu = document.querySelector('.nav__list');
+burger.addEventListener('click', () => {
+  console.log('click');
+    menu.classList.toggle('open');
+});
+
 
 //  СМЕНА ПОЗИЦИИ ИЗОБРАЖЕНИЙ ///////////////////////////////////////////////////////////////////////////
 
