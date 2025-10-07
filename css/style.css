@@ -15,6 +15,16 @@
   justify-content: space-between;
   margin-bottom: 177px;
 }
+@media screen and (max-width: 1100px) {
+  .what-we-do__card {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 900px) {
+  .what-we-do__card {
+    margin-bottom: 50px;
+  }
+}
 .what-we-do__card_content {
   max-width: 474px;
   width: 100%;
@@ -22,6 +32,14 @@
   flex-direction: column;
   align-items: flex-start;
   padding-top: 115px;
+}
+@media screen and (max-width: 900px) {
+  .what-we-do__card_content {
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 .what-we-do__card_img {
   position: relative;
@@ -56,6 +74,11 @@
 .what-we-do__card_reverse {
   flex-direction: row-reverse;
   margin-left: auto;
+}
+@media screen and (max-width: 1100px) {
+  .what-we-do__card_reverse {
+    flex-direction: column;
+  }
 }
 .what-we-do__card-subtitle {
   font-family: "Montserrat", sans-serif;
@@ -97,6 +120,11 @@
   text-transform: uppercase;
   color: #2C4058;
   margin-bottom: 90px;
+}
+@media screen and (max-width: 900px) {
+  .section__subtitle {
+    margin-bottom: 50px;
+  }
 }
 
 .btn {
@@ -319,6 +347,7 @@ body {
   scroll-behavior: smooth;
   background: #fff;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -349,6 +378,11 @@ a {
   .header__background {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header__background {
+    margin-bottom: 50px;
   }
 }
 
@@ -464,11 +498,14 @@ a {
   gap: 20px;
   z-index: 3;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
   .header__dots {
-    top: 530px;
+    position: static;
     flex-direction: row;
-    left: 30%;
+    width: 65px;
+    margin: 20px auto;
+    z-index: 8;
+    cursor: pointer;
   }
 }
 .header__sentinel {
@@ -722,13 +759,17 @@ a {
 }
 
 .fadeout {
-  opacity: 0; /* изначально невидим */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+  opacity: 0;
+  /* изначально невидим */
+  transition: opacity 1s ease-in-out;
+  /* плавный переход */
 }
 
 .fadein {
-  opacity: 1; /* конечное значение */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+  opacity: 1;
+  /* конечное значение */
+  transition: opacity 1s ease-in-out;
+  /* плавный переход */
 }
 
 .img {
@@ -831,6 +872,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 0 20px;
+  }
 }
 .footer__upper-block, .footer__lower-block {
   display: inline-flex;
@@ -1109,8 +1155,7 @@ a {
   font-weight: 400;
   line-height: 28px;
 }
-
-.error-message {
+.form .error-message {
   color: red;
   display: none;
 }/*# sourceMappingURL=style.css.map */

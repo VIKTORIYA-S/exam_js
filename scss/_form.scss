@@ -2,6 +2,8 @@
     height: 1px;
     position: relative;
 
+    
+
     &__wrapper {
         position: absolute;
         bottom: -150px;
@@ -75,10 +77,9 @@
             line-height: 28px;
         }
     }
-}
 
-.error-message {
+    .error-message {
     color: red;
     display: none;
 }
-
+}

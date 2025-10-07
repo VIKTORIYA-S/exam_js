@@ -11,13 +11,15 @@
 }
 
 html {
-  scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: $font-montserrat;
     scroll-behavior: smooth;
     background: $color-white;
-    height: 100%
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -45,9 +47,13 @@ a {
     overflow: hidden;
 
     @media screen and (max-width: 1220px) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin-bottom: 50px;
+    }
 }
 
 .header {
@@ -59,35 +65,35 @@ a {
     position: relative;
 
     &__images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 
-&__img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
-}
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+    }
 
-&__images::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $color-black;
-  opacity: 0;
-  z-index: 5;
-}
+    &__images::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-black;
+        opacity: 0;
+        z-index: 5;
+    }
 
     &__menu {
         max-width: 1170px;
@@ -163,13 +169,15 @@ a {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        // position: relative;
         z-index: 3;
 
-        @media screen and (max-width: 550px) {
-            top: 530px;
+        @media screen and (max-width: 900px) {
+            position: static;
             flex-direction: row;
-            left: 30%;
+            width: 65px;
+            margin: 20px auto;
+            z-index: 8;
+            cursor: pointer;
         }
     }
 
@@ -204,27 +212,27 @@ a {
     transition: all 0.5s ease;
 }
 
-    .header__arrow {
-        position: absolute;
-        top: 680px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+.header__arrow {
+    position: absolute;
+    top: 680px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-        &:hover {
-            color: $color-black;
-            border: 1px solid $color-black;
-        }
-    }
-
-    .main__arrow {
-        margin: 0 auto;
-        position: sticky;
-        top: 20px;
-        right: 48.5%;
+    &:hover {
         color: $color-black;
         border: 1px solid $color-black;
-        display: none;
     }
+}
+
+.main__arrow {
+    margin: 0 auto;
+    position: sticky;
+    top: 20px;
+    right: 48.5%;
+    color: $color-black;
+    border: 1px solid $color-black;
+    display: none;
+}
 
 .logo {
     margin-right: 34px;
@@ -256,20 +264,20 @@ a {
         justify-content: space-between;
         position: relative;
 
-            @media screen and (max-width: 900px) {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 45px;
-        width: 160px;
-        height: 100%;
-        background-color: $color-linear;
-        padding: 200px 20px;
-        z-index: 5;
-        transform: translateX(200px);
-        transition: transform 0.5s ease-in-out;
-        display: block;
-    }
+        @media screen and (max-width: 900px) {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 45px;
+            width: 160px;
+            height: 100%;
+            background-color: $color-linear;
+            padding: 200px 20px;
+            z-index: 5;
+            transform: translateX(200px);
+            transition: transform 0.5s ease-in-out;
+            display: block;
+        }
     }
 
     &__link {
@@ -281,9 +289,9 @@ a {
         font-size: 14px;
         color: $color-white;
         position: relative;
-         cursor: pointer;
-         line-height: 1.5px;
-         text-decoration: none;
+        cursor: pointer;
+        line-height: 1.5px;
+        text-decoration: none;
 
         @media screen and (max-width: 900px) {
             font-size: 18px;
@@ -293,6 +301,7 @@ a {
 
     &__burger {
         display: none;
+
         @media screen and (max-width: 900px) {
             display: block;
             position: relative;
@@ -329,27 +338,27 @@ a {
 }
 
 .nav__link:hover {
-        font-weight: 600;
-        transition: all 0.5s ease;
-    }
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
 
-    .nav__link::after {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 15px;
-        width: 0;
-        height: 2px;
-        background-color: $color-white;
-        content: "";
-        transition: width 0.4s ease-out;
-        margin-top: 3px;
-    }
+.nav__link::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 0;
+    height: 2px;
+    background-color: $color-white;
+    content: "";
+    transition: width 0.4s ease-out;
+    margin-top: 3px;
+}
 
-    .nav__link:hover::after {
-        margin-top: 2px;
-        width: 100%;
-        }
+.nav__link:hover::after {
+    margin-top: 2px;
+    width: 100%;
+}
 
 .wrapper__dot {
     width: 40px;
@@ -433,13 +442,17 @@ a {
 }
 
 .fadeout {
-  opacity: 0;                 /* изначально невидим */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+    opacity: 0;
+    /* изначально невидим */
+    transition: opacity 1s ease-in-out;
+    /* плавный переход */
 }
 
 .fadein {
-  opacity: 1;                 /* конечное значение */
-  transition: opacity 1s ease-in-out; /* плавный переход */
+    opacity: 1;
+    /* конечное значение */
+    transition: opacity 1s ease-in-out;
+    /* плавный переход */
 }
 
 .img {
@@ -458,8 +471,8 @@ a {
     width: 100%;
     height: 700px;
     z-index: 1;
-     filter: hue-rotate(459deg) brightness(0.9) contrast(-1.2);
-     transition: filter 0.5s ease;
+    filter: hue-rotate(459deg) brightness(0.9) contrast(-1.2);
+    transition: filter 0.5s ease;
 }
 
 .custom-icon {
@@ -468,68 +481,73 @@ a {
 }
 
 .controls {
-      position: absolute;
-      top: 12px;
-      left: 50px;
-      z-index: 1000;
-      background: #4b9ce291;
-      padding: 8px;
-      border-radius: 6px;
-      font-family: sans-serif;
+    position: absolute;
+    top: 12px;
+    left: 50px;
+    z-index: 1000;
+    background: #4b9ce291;
+    padding: 8px;
+    border-radius: 6px;
+    font-family: sans-serif;
 
-      @media screen and (max-width: 535px) {
+    @media screen and (max-width: 535px) {
         display: none;
-      }
     }
+}
 
-    .controls button {
-      margin: 4px;
-      padding: 6px 12px;
-      cursor: pointer;
-    }
+.controls button {
+    margin: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
 
-    .leaflet-grab {
-        cursor: pointer;
-    }
+.leaflet-grab {
+    cursor: pointer;
+}
 
-    .leaflet-container {
-        color: #ed17c2
-    }
+.leaflet-container {
+    color: #ed17c2
+}
 
-    .map__btn_1 {
-        color: #047df6;
-        font-size: 20px;
-    }
+.map__btn_1 {
+    color: #047df6;
+    font-size: 20px;
+}
 
-    .map__btn_2 {
-        color: #db17ed;
-        font-size: 20px;
-    }
+.map__btn_2 {
+    color: #db17ed;
+    font-size: 20px;
+}
 
-    .orange {
-        color: #d19004;
-    }
+.orange {
+    color: #d19004;
+}
 
-    .map__btn_3 {
-        color: #430601;
-        font-size: 20px;
-    }
+.map__btn_3 {
+    color: #430601;
+    font-size: 20px;
+}
 
-    .leaflet-popup-content {
-        font-size: 20px;
-        color: #f42626;
-    }
+.leaflet-popup-content {
+    font-size: 20px;
+    color: #f42626;
+}
 
 .typing {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 4s steps(20) forwards;
-  border-right: 2px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(20) forwards;
+    border-right: 2px solid black;
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 
