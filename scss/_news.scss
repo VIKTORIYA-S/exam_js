@@ -305,6 +305,10 @@
 
 .slider {
     padding: 0 60px;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 20px;
+    }
 }
 
 .slider .slick-arrow{
@@ -328,10 +332,18 @@
 
 .slider .slick-arrow.slick-prev{
     left: 30px;
+
+    @media screen and (max-width: 500px) {
+        left: 20%;
+    }
 }
 
 .slider .slick-arrow.slick-next{
     right: 30px;
+
+    @media screen and (max-width: 500px) {
+        right: 20%;
+    }
 }
 
 .slick-prev:hover,

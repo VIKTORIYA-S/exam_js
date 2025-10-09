@@ -1046,6 +1046,11 @@ a {
 .slider {
   padding: 0 60px;
 }
+@media screen and (max-width: 500px) {
+  .slider {
+    padding: 0 20px;
+  }
+}
 
 .slider .slick-arrow {
   position: absolute;
@@ -1070,9 +1075,19 @@ a {
 .slider .slick-arrow.slick-prev {
   left: 30px;
 }
+@media screen and (max-width: 500px) {
+  .slider .slick-arrow.slick-prev {
+    left: 20%;
+  }
+}
 
 .slider .slick-arrow.slick-next {
   right: 30px;
+}
+@media screen and (max-width: 500px) {
+  .slider .slick-arrow.slick-next {
+    right: 20%;
+  }
 }
 
 .slick-prev:hover,
