@@ -162,11 +162,13 @@
 
 .modal {
     position: fixed;
+    left: 0;
+    top: 0;
     inset: 0;
     z-index: 5;
     width: 100%;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     background-color: $color-background;
     justify-content: center;
     align-items: center;
@@ -219,6 +221,12 @@
         font-size: 16px;
         font-weight: 400;
         color: $color-white;
+
+        @media screen and (max-width: 600px) {
+            right: 0px;
+            width: 305px;
+            height: 402px;
+        }
     }
 
     &__subtitle {

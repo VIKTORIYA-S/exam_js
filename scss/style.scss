@@ -105,6 +105,7 @@ a {
         margin-bottom: 123px;
         position: relative;
         z-index: 3;
+        align-items: center;
         overflow: hidden;
 
         @media screen and (max-width: 550px) {
@@ -121,6 +122,10 @@ a {
         align-items: center;
         position: relative;
         z-index: 3;
+
+        @media screen and (max-width: 900px) {
+        margin-bottom: 50px;
+    }
     }
 
     &__title {
@@ -158,14 +163,18 @@ a {
         text-transform: uppercase;
         color: $color-white;
         margin-bottom: 240px;
+
+        @media screen and (max-width: 500px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__dots {
-        width: 20px;
+        width: 40px;
         position: absolute;
         top: 295px;
         left: 94%;
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -174,9 +183,10 @@ a {
         @media screen and (max-width: 900px) {
             position: static;
             flex-direction: row;
-            width: 65px;
-            margin: 20px auto;
+            margin-top: 40px;
+            margin: auto;
             z-index: 8;
+            width: 280px;
             cursor: pointer;
         }
     }
@@ -237,7 +247,7 @@ a {
 .logo {
     margin-right: 34px;
 
-    @media screen and (max-width: 5500px) {
+    @media screen and (max-width: 550px) {
         margin-bottom: 30px;
     }
 }
