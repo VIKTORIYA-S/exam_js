@@ -88,11 +88,20 @@ document.addEventListener('click', () => {
 });
 
 // БУРГЕР МЕНЮ //////////////////////////////////////////////////////////////////////////////
+  const lineOne = document.querySelector(".nav__line_first");
+  const lineTwo = document.querySelector(".nav__line_second");
+  const lineThree = document.querySelector(".nav__line_third");
+  const body = document.querySelector("body");
 const burger = document.querySelector('.nav__burger');
 const menu = document.querySelector('.nav__list');
+
+
 burger.addEventListener('click', () => {
-  console.log('click');
     menu.classList.toggle('open');
+    lineOne.classList.toggle('rotate');
+    lineTwo.classList.toggle('hide');
+    lineThree.classList.toggle('rotate');
+    body.classList.toggle('no-scroll');
 });
 
 

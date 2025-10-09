@@ -9,7 +9,7 @@ const modalText = document.querySelector('.modal__text');
 
 
 function openModal(srcImg, subtitle, text) {
-    modal.classList.add('open');
+    modal.classList.add('open_modal');
     modalImg.src = srcImg;
     modalSubtitle.textContent = subtitle;
     modalText.textContent = text;
@@ -38,12 +38,12 @@ function openModal_2() {
 openModal_2();
 
 modalClose.addEventListener('click', () => {
-    modal.classList.remove('open');
+    modal.classList.remove('open_modal');
 });
 
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.classList.remove('open');
+        modal.classList.remove('open_modal');
     }
 })
 
